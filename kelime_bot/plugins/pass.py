@@ -34,7 +34,7 @@ async def passs(c:Client, m:Message):
                 kelime_list+= harf + " "
             
             text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/60 
+🎯 Raund : {oyun[m.chat.id]['round']}/20 
 📝 Söz :   <code>{kelime_list}</code>
 💰 Topladığıniz Xal : 1
 🔎 Kömək : 1. {oyun[m.chat.id]["kelime"][0]}
