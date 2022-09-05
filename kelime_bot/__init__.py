@@ -47,5 +47,5 @@ rating = {}
 
 # !!!!!!!!!!!!!! DEĞİŞTİR KESİNLİKLE !!!!!!!!!!!!!!!!
 #      SAHİBİN USER ID'Sİ
-OWNER_ID = 974246367
+OWNER_ID = 5751799894
 
