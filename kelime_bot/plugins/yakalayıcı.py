@@ -60,7 +60,7 @@ async def buldu(c:Client, m:Message):
                 text = f"""
 🎯 Raund : {oyun[m.chat.id]['round']}/20 
 📝 Söz :   <code>{kelime_list}</code>
-💰 Qazandığın Xal: 1
+💰 Topladığıniz Xal : 1
 🔎 Kömək: 1. {oyun[m.chat.id]["kelime"][0]}
 ✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
 
