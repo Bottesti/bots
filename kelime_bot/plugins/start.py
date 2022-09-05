@@ -37,14 +37,14 @@ HELP = """
 # Komutlar. 
 @Client.on_message(filters.command("start"))
 async def start(bot, message):
-  await message.reply_photo("https://i.ibb.co/K6QTywd/images-17.jpg",caption=START,reply_markup=keyboard)
+  await message.reply_photo("https://images.app.goo.gl/24txmswdZLq8jrZ88",caption=START,reply_markup=keyboard)
 
 @Client.on_message(filters.command("help"))
 async def help(bot, message):
-  await message.reply_photo("https://i.ibb.co/K6QTywd/images-17.jpg",caption=HELP) 
+  await message.reply_photo("https://images.app.goo.gl/24txmswdZLq8jrZ88",caption=HELP) 
 
 # Oyunu başlat. 
-@Client.on_message(filters.command("game")) 
+@Client.on_message(filters.command("oyun")) 
 async def kelimeoyun(c:Client, m:Message):
     global oyun
     aktif = False
@@ -55,31 +55,31 @@ async def kelimeoyun(c:Client, m:Message):
         aktif = False
 
     if aktif:
-        await m.reply("**❗ Oyun Zaten Grubunuzda Devam Ediyor ✍🏻 \n Oyunu durdurmak için yazıp /cancel durdurabilirsiniz")
+        await m.reply("**❗😑 Oyun Onsuzda Qrubunuzda Devam Edir ✍🏻 \n Oyunu dayandırmaq üçün /cancel yaza bilərsiniz.")
     else:
-        await m.reply(f"**{m.from_user.mention}** Tarafından! \nKelime Bulma Oyunu Başladı .\n\nİyi Şanslar !", reply_markup=kanal)
+        await m.reply(f"**{m.from_user.mention}** Tərəfindən! \nSoz Tapma Oyunu Başladı .\n\nUgurlar!", reply_markup=kanal)
         
-        oyun[m.chat.id] = {"kelime":kelime_sec()}
+        oyun[m.chat.id] = {"soz":kelime_sec()}
         oyun[m.chat.id]["aktif"] = True
         oyun[m.chat.id]["round"] = 1
-        oyun[m.chat.id]["pass"] = 0
+        oyun[m.chat.id]["kec"] = 0
         oyun[m.chat.id]["oyuncular"] = {}
         
         kelime_list = ""
-        kelime = list(oyun[m.chat.id]['kelime'])
+        kelime = list(oyun[m.chat.id]['soz'])
         shuffle(kelime)
         
         for harf in kelime:
             kelime_list+= harf + " "
         
         text = f"""
-🎯 Raund : {oyun[m.chat.id]['round']}/60 
+🎯 Raund : {oyun[m.chat.id]['round']}/20 
 📝 Söz :   <code>{kelime_list}</code>
-💰 Kazandığınız Puan: 1
-🔎 İpucu: 1. {oyun[m.chat.id]["kelime"][0]}
-✍🏻 Uzunluk : {int(len(kelime_list)/2)} 
+💰 Topladığıniz Xal: 1
+🔎 Kömək: 1. {oyun[m.chat.id]["kelime"][0]}
+✍🏻 Uzunluq : {int(len(kelime_list)/2)} 
 
-✏️ Karışık harflerden doğru kelimeyi bulun
+✏️ Qarışıq hərflərdən düzgün sözü tapın
         """
         await c.send_message(m.chat.id, text)
         
