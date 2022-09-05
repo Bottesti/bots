@@ -11,27 +11,27 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 
 keyboard = InlineKeyboardMarkup([
     [
-        InlineKeyboardButton("➕ Grubuna Ekle", url=f"http://t.me/KelimeHazinesiBot?startgroup=new")
+        InlineKeyboardButton("➕ Qrubuna At", url=f"http://t.me/SozTapBot?startgroup=new")
     ],
     [
-        InlineKeyboardButton("🇹🇷 Sahibim", url="https://t.me/nevarevladim"),
-        InlineKeyboardButton("💬 Chat", url="https://t.me/+0kf_3zSzsCszZWJk"),
+        InlineKeyboardButton("🇦🇿 Sahibim", url="https://t.me/Thagiyevv"),
+        InlineKeyboardButton("📣 Resmi Kanal", url="https://t.me/RiyaddBlog"),
     ]
 ])
 
 
 START = """
-**🔮 Merhaba, Kelimeleri tersten bulma oyununa hoş geldin..**
+**🔔 Salam, Sözləri düzgün tapma oynuna xoş gəldin..**
 
-➤ Bilgi için 👉 /help Tıklayın. Komutlar kolay ve basittir. 
+➤ Məlumat üçün 👉 /help Vurun. Ayarlar asand və sadədir. 
 """
 
 HELP = """
-**✌️ Komutlar Menüsüne Hoşgeldiniz.**
-/game - Oyunu başlatmak için..
-/pass - Üç adet hakkınız mevcut, oyunu geçmek için.. 
-/skor - Oyuncular arasındaki rekabet bilgisi..
-/cancel - Oyundan çıkmak için gerekli olan komuttur.. 
+**📣 Ayarlar Menyusuna Xoş Gəldiniz.**
+/oyun - Oyunu başlamaq üçün..
+/kec - Üç ədəd keçmə haqqınız mövcüddur. 
+/qreytinq - Oyuncular Arasında ki Rəqabət..
+/cancel - Oyundan çıxmaq üçün lazım olan əmirdi.. 
 """
 
 # Komutlar. 
